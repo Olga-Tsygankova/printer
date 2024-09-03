@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'SSEC';
+  src: url(../../../public/Fonts/SofiaSansExtraCondensed-Bold.woff2);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'SSEC';
+  src: url(../../../public/Fonts/SofiaSansExtraCondensed-BoldItalic.woff2);
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SSEC';
+  src: url(../../../public/Fonts/SofiaSansExtraCondensed-SemiBold.woff2);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'SSEC';
+  src: url(../../../public/Fonts/SofiaSansExtraCondensed-SemiBoldItalic.woff2);
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SSEC';
+  src: url(../../../public/Fonts/SofiaSansExtraCondensed-MediumItalic.woff2);
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SSEC';
+  src: url(../../../public/Fonts/SofiaSansExtraCondensed-Regular.woff2);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SF';
+  src: url(../../../public/Fonts/sf-ui-display-semibold-58646eddcae92.woff2);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'SF';
+  src: url(../../../public/Fonts/sf-ui-display-medium-58646be638f96.woff2);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'SF';
+  src: url(../../../public/Fonts/sf-ui-display-light-58646b33e0551.woff2);
+  font-weight: 300;
+}
+
+
+body {
+  font-family: 'SF';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'SSEC';
+}
