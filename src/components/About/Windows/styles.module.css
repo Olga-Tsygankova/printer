@@ -1,0 +1,96 @@
+.windows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.window {
+  border: 1px solid #989898;
+  border-radius: 10px;
+
+  width: 350px;
+  height: 210px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 8px 10px 20px;
+
+}
+
+.icons {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.text {
+  font-family: SF300;
+  font-size: 16px;
+  color: #FFFFFF;
+  line-height: 23.93px;
+
+  width: 312px;
+  margin-top: auto;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 720px) {
+  .windows {
+    gap: 32px;
+  }
+
+  .window {
+    width: 528px;
+    height: 325px;
+
+    padding: 15px 15px 48px;
+  }
+
+  .text{
+    width: 464px;
+
+    font-size: 24px;
+    line-height: 36px;
+    margin-left: 15px;
+  }
+  .icons img{
+    width: 10px;
+  }
+}
+
+@media (min-width: 1000px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 1440px) {
+  .windows{
+    width: 1312px;
+    gap: 0;
+  }
+  .window-1{
+    margin-right: auto;
+  }
+  .window-2{
+    margin-left: auto;
+    position: relative;
+    top: -100px;
+
+  }
+  .window-3{
+    margin-right: auto;
+    margin-left: 246px;
+  }
+
+}
