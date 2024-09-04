@@ -46,10 +46,7 @@ export const Footer = () => {
             <a href="#">Roadmap</a>
           </div>
         </div>
-
-
       </div>
-
     </div>
   );
 };
