@@ -130,5 +130,51 @@
 }
 
 @media (min-width: 1440px) {
+  .banner {
+    gap: 52px;
+
+    margin: 121px auto 0;
+
+    width: 1346px;
+
+    position: relative;
+  }
+  .title{
+    width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .title h1{
+    font-size: 152px;
+
+  }
+  .printer {
+    font-size: 170px;
+  }
+  .spring {
+    width: 64px;
+  }
+  .text1{
+    order: -1;
+    width: 640px;
+
+  }
+  .text2{
+    margin-left: auto;
+    width: 640px;
+  }
+  .lineContainer{
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+  }
+  @keyframes font-size-change {
+    0% {
+      font-size: 170px;
+    }
+    100% {
+      font-size: 152px;
+    }
+  }
 
 }
