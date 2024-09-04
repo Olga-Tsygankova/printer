@@ -1,0 +1,109 @@
+.typewriter {
+  margin: 112px 12px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.firstText {
+  font-size: 20px;
+  font-family: SF300;
+  color: #FFFFFF;
+  opacity: 50%;
+}
+
+.your {
+  color: #9EFF52;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.title h2 {
+  color: #FFFFFF;
+  font-family: SSEC600;
+  font-size: 64px;
+  text-transform: uppercase;
+
+  margin: 20px 0 0;
+}
+
+
+
+.typingText {
+  color: #9EFF52;
+}
+
+.typingText {
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn {
+  background: none;
+
+  outline: none;
+
+  border: 1px solid #FFFFFF;
+  border-radius: 15px;
+
+  cursor: pointer;
+
+  color: #FFFFFF;
+  font-size: 16px;
+  font-family: SF300;
+
+  width: 344px;
+  height: 60px;
+}
+
+.btn:hover {
+  border: 1px solid #9EFF52;
+  color: #9EFF52;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 720px) {
+  .firstText {
+    font-size: 28px;
+  }
+
+  .title h2 {
+    font-size: 92px;
+  }
+}
+
+@media (min-width: 1000px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 1440px) {
+
+  .firstText {
+    font-size: 32px;
+  }
+
+  .title h2 {
+    font-size: 130px;
+  }
+  .btn{
+    width: 416px;
+    height: 80px;
+    font-size: 24px;
+  }
+
+}
