@@ -1,65 +1,54 @@
+:root {
+  --left-gradient-top: 0;
+  --right-gradient-top: 0;
+}
+
 .gradient {
   display: flex;
-  height: 100vh; /* Высота экрана */
   justify-content: space-between;
   position: fixed;
-  top: 0px;
-  left: 0;
+
+  height: 100vh;
   width: 100%;
+
+  top: 0;
+  left: 0;
+
   pointer-events: none; /* Чтобы не мешать кликам на другие элементы */
 }
 
-.gradientLeft, .gradientRight {
-  width: 400px;
-  height: 200px;
-  border-radius: 50%;
-  margin: 20px;
-}
-
 .gradientLeft {
+  margin-top: 300px;
+
   position: relative;
-  top: 0;
+  top: var(--left-gradient-top);
   left: -250px;
+
   width: 30%;
   height: 50%;
+
   border-radius: 50%;
+
   background: radial-gradient(
     circle at center,
     #9EFF528A 0%,
     rgba(158, 255, 82, 0.22) 50%,
     rgba(158, 255, 82, 0.18) 100%
   );
+
   filter: blur(60px); /* Размытие */
   z-index: -1; /* Отправить на задний план */
-  animation: scaleLeft 10s linear infinite; /* Анимация масштаба */
-}
-
-.gradientLeft::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -250px;
-  width: 50%;
-  height: 50%;
-  border-radius: 50%;
-  filter: blur(40px); /* Размытие */
-
-  background: radial-gradient(
-    circle at center,
-    #9eff52 0%,
-    rgba(158, 255, 82, 0.22) 50%,
-    rgba(158, 255, 82, 0.18) 100%
-  );
-  z-index: -1; /* На передний план */
   animation: scaleLeft 10s linear infinite; /* Анимация масштаба */
 }
 
 .gradientRight {
   position: relative;
-  top: 200px;
+  top: var(--right-gradient-top);
   right: -250px;
+
   width: 30%;
   height: 50%;
+
   border-radius: 50%;
   background: radial-gradient(
     circle at center,
@@ -67,28 +56,9 @@
     rgba(158, 255, 82, 0.22) 50%,
     rgba(158, 255, 82, 0.18) 100%
   );
+
   filter: blur(60px); /* Размытие */
   z-index: -1; /* Отправить на задний план */
-  animation: scaleRight 10s linear infinite; /* Анимация масштаба */
-}
-
-.gradientRight::after {
-  content: "";
-  position: absolute;
-  top: 200px;
-  right: -250px;
-  width: 50%;
-  height: 50%;
-  border-radius: 50%;
-  filter: blur(40px); /* Размытие */
-
-  background: radial-gradient(
-    circle at center,
-    #9eff52 0%,
-    rgba(158, 255, 82, 0.22) 50%,
-    rgba(158, 255, 82, 0.18) 100%
-  );
-  z-index: 1; /* На передний план */
   animation: scaleRight 10s linear infinite; /* Анимация масштаба */
 }
 
