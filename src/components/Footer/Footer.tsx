@@ -8,7 +8,7 @@ export const Footer = () => {
         <img src={logo} alt=""/>
       </div>
       <div className={styles.ca}>
-        CA: 78sdf78sd78asd76asd87as67d65fd7s8
+        CA: coming soon
       </div>
       <div className={styles.links}>
         <div className={styles.webLinks}>

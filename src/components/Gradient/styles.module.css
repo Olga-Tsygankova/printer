@@ -1,9 +1,13 @@
-.gradient{
+.gradient {
   display: flex;
-  height: 297px;
+  height: 100vh; /* Высота экрана */
   justify-content: space-between;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  pointer-events: none; /* Чтобы не мешать кликам на другие элементы */
 }
-
 
 .gradientLeft, .gradientRight {
   width: 400px;
@@ -22,19 +26,12 @@
   background: radial-gradient(
     circle at center,
     #9EFF528A 0%,
-    /*#9EFF528A 10%,*/
-    /*#9EFF528A 20%,*/
-    /*#9EFF528A 30%,*/
-    /*#9EFF528A 40%,*/
-    #9EFF528A 50%,
-    /*#9EFF528A 60%,*/
-    /*#9EFF528A 70%,*/
-    /*#9EFF528A 80%,*/
-    /*#9EFF528A 90%,*/
-    #9EFF528A 100%
+    rgba(158, 255, 82, 0.22) 50%,
+    rgba(158, 255, 82, 0.18) 100%
   );
   filter: blur(60px); /* Размытие */
   z-index: -1; /* Отправить на задний план */
+  animation: scaleLeft 10s linear infinite; /* Анимация масштаба */
 }
 
 .gradientLeft::after {
@@ -50,16 +47,71 @@
   background: radial-gradient(
     circle at center,
     #9eff52 0%,
-    /*#9eff52 10%,*/
-    /*#9eff52 20%,*/
-    /*#9eff52 30%,*/
-    /*#9EFF528A 40%,*/
-    #9EFF528A 50%,
-    /*#9EFF528A 60%,*/
-    /*#9EFF528A 70%,*/
-    /*#9EFF528A 80%,*/
-    /*#9EFF528A 90%,*/
-    #9EFF528A 100%
+    rgba(158, 255, 82, 0.22) 50%,
+    rgba(158, 255, 82, 0.18) 100%
+  );
+  z-index: -1; /* На передний план */
+  animation: scaleLeft 10s linear infinite; /* Анимация масштаба */
+}
+
+.gradientRight {
+  position: relative;
+  top: 200px;
+  right: -250px;
+  width: 30%;
+  height: 50%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    #9EFF528A 0%,
+    rgba(158, 255, 82, 0.22) 50%,
+    rgba(158, 255, 82, 0.18) 100%
+  );
+  filter: blur(60px); /* Размытие */
+  z-index: -1; /* Отправить на задний план */
+  animation: scaleRight 10s linear infinite; /* Анимация масштаба */
+}
+
+.gradientRight::after {
+  content: "";
+  position: absolute;
+  top: 200px;
+  right: -250px;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  filter: blur(40px); /* Размытие */
+
+  background: radial-gradient(
+    circle at center,
+    #9eff52 0%,
+    rgba(158, 255, 82, 0.22) 50%,
+    rgba(158, 255, 82, 0.18) 100%
   );
   z-index: 1; /* На передний план */
+  animation: scaleRight 10s linear infinite; /* Анимация масштаба */
+}
+
+@keyframes scaleLeft {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleRight {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

@@ -11,6 +11,7 @@
 
 .title {
   width: 351px;
+  z-index: 100;
 }
 
 .title h1 {
@@ -72,6 +73,8 @@
   line-height: 19.09px;
 
   width: 350px;
+  z-index: 100;
+
 
 }
 
