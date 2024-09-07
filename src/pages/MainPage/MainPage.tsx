@@ -5,12 +5,14 @@ import { Banner } from '../../components/Banner';
 import { About } from '../../components/About/About.tsx';
 import { Typewriter } from '../../components/Typewriter';
 import { Upload } from '../../components/Upload';
+import { Gradient } from '../../components/Gradient';
 
 export const MainPage = () => {
   return(
     <div className={styles.main}>
       <Header/>
       <Banner/>
+      <Gradient/>
       <Upload/>
       <About/>
       <Typewriter/>

@@ -1,0 +1,65 @@
+.gradient{
+  display: flex;
+  height: 297px;
+  justify-content: space-between;
+}
+
+
+.gradientLeft, .gradientRight {
+  width: 400px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.gradientLeft {
+  position: relative;
+  top: 0;
+  left: -250px;
+  width: 30%;
+  height: 50%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    #9EFF528A 0%,
+    /*#9EFF528A 10%,*/
+    /*#9EFF528A 20%,*/
+    /*#9EFF528A 30%,*/
+    /*#9EFF528A 40%,*/
+    #9EFF528A 50%,
+    /*#9EFF528A 60%,*/
+    /*#9EFF528A 70%,*/
+    /*#9EFF528A 80%,*/
+    /*#9EFF528A 90%,*/
+    #9EFF528A 100%
+  );
+  filter: blur(60px); /* Размытие */
+  z-index: -1; /* Отправить на задний план */
+}
+
+.gradientLeft::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -250px;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  filter: blur(40px); /* Размытие */
+
+  background: radial-gradient(
+    circle at center,
+    #9eff52 0%,
+    /*#9eff52 10%,*/
+    /*#9eff52 20%,*/
+    /*#9eff52 30%,*/
+    /*#9EFF528A 40%,*/
+    #9EFF528A 50%,
+    /*#9EFF528A 60%,*/
+    /*#9EFF528A 70%,*/
+    /*#9EFF528A 80%,*/
+    /*#9EFF528A 90%,*/
+    #9EFF528A 100%
+  );
+  z-index: 1; /* На передний план */
+}
