@@ -4,7 +4,6 @@ export const VerticalSteps = () => {
   return (
     <div className={styles.verticalSteps}>
       <div className={styles.verticalStepsContainer}>
-
         <div className={styles.frame}>
           <div className={styles.rectangle}>
           </div>
@@ -27,7 +26,6 @@ export const VerticalSteps = () => {
           </div>
           <div>PRINT</div>
           <div>Invest in other tokens and track your investment history in your personal account.</div>
-
         </div>
       </div>
       <div className={styles.btn}>
