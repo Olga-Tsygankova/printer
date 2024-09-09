@@ -9,11 +9,16 @@
   background-color: #9EFF52;
 
   border-radius: 4px;
+
+  position: sticky;
+  top: 20%;
 }
 
 .verticalStepsContainer {
   display: flex;
   gap: 18px;
+
+  position: relative;
 }
 
 .text {
@@ -28,6 +33,10 @@
   color: #FFFFFF;
 
   margin: 17px 0 50px;
+}
+
+.textBlock {
+  transition: opacity 1s ease;
 }
 
 .frame {
