@@ -6,6 +6,7 @@ import { About } from '../../components/About/About.tsx';
 import { Typewriter } from '../../components/Typewriter';
 import { Upload } from '../../components/Upload';
 import { Gradient } from '../../components/Gradient';
+import { RoadMap } from '../../components/RoadMap';
 
 export const MainPage = () => {
   return(
@@ -16,6 +17,7 @@ export const MainPage = () => {
       <Upload/>
       <About/>
       <Typewriter/>
+      <RoadMap/>
       <Footer/>
     </div>
   )

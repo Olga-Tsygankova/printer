@@ -1,0 +1,77 @@
+.verticalSteps{
+  margin-top: 11px;
+}
+
+.rectangle{
+  width: 18px;
+  height: 150px;
+
+  background-color: #9EFF52;
+
+  border-radius: 4px;
+}
+
+.verticalStepsContainer{
+  display: flex;
+  gap: 18px;
+}
+.text{
+  width: 310px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  font-family: SF300;
+  color: #FFFFFF;
+
+  margin: 17px 0 50px;
+}
+
+.frame{
+  border: 1px solid #9EFF52;
+
+  width: 20px;
+
+  border-radius: 4px;
+}
+.btn button{
+  outline: none;
+  border: none;
+
+  background-color: #9EFF52;
+
+  border-radius: 15px;
+
+  width: 351px;
+  height: 60px;
+
+  font-size: 16px;
+
+  margin-top: 11px;
+}
+
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 720px) {
+
+}
+
+@media (min-width: 1000px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 1440px) {
+
+}
