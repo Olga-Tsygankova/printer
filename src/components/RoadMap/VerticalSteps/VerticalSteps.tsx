@@ -1,31 +1,99 @@
 import styles from './styles.module.css';
+import { useEffect, useRef, useState } from 'react';
 
 export const VerticalSteps = () => {
+
+  const arrowRef = useRef<HTMLDivElement | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [visibleBlocks, setVisibleBlocks] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (arrowRef.current && containerRef.current) {
+        const arrowRect = arrowRef.current.getBoundingClientRect();
+        const textBlocks = containerRef.current.querySelectorAll(
+          `.${styles.textBlock}`,
+        );
+
+        textBlocks.forEach((block, index) => {
+          const blockRect = block.getBoundingClientRect();
+          if (
+            arrowRect.top < blockRect.bottom &&
+            arrowRect.bottom > blockRect.top
+          ) {
+            setVisibleBlocks((prev) => {
+              const newVisibleBlocks = [...prev];
+              newVisibleBlocks[index] = true;
+              return newVisibleBlocks;
+            });
+          } else {
+            setVisibleBlocks((prev) => {
+              const newVisibleBlocks = [...prev];
+              newVisibleBlocks[index] = false;
+              return newVisibleBlocks;
+            });
+          }
+        });
+
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Initial check on mount
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className={styles.verticalSteps}>
-      <div className={styles.verticalStepsContainer}>
+      <div className={styles.verticalStepsContainer} ref={containerRef}>
         <div className={styles.frame}>
-          <div className={styles.rectangle}>
+          <div className={styles.rectangle} ref={arrowRef}>
           </div>
         </div>
         <div className={styles.text}>
-          <div>Go to the Printer platform and log in
+          <div className={styles.textBlock} style={{ opacity: visibleBlocks[0] ? 1 : 0.5 }}>
+            Go to the Printer platform and log in
             via Telegram.
           </div>
-          <div>Create your own token by providing:<br/>
+          <div className={styles.textBlock} style={{ opacity: visibleBlocks[1] ? 1 : 0.4 }}>
+            Create your own token by
+            providing:<br/>
             &bull; token name<br/>
             &bull; token ticker<br/>
             &bull; total token supply<br/>
             &bull; choose the blockchain for release (Native, TON, SOL, etc.)
 
           </div>
-          <div>Your token starts to PRINT.</div>
-          <div>Upon hitting the bonding curve, we create a liquidity pool for your asset either natively on Printer, or
+          <div className={styles.textBlock} style={{ opacity: visibleBlocks[2] ? 1 : 0.3 }}>
+            Your token starts to
+            PRINT.
+          </div>
+          <div className={styles.textBlock} style={{ opacity: visibleBlocks[3] ? 1 : 0.2 }}>
+            Upon hitting the bonding
+            curve, we create a liquidity
+            pool for your asset either natively on Printer, or
             on
             a DEX.
           </div>
-          <div>PRINT</div>
-          <div>Invest in other tokens and track your investment history in your personal account.</div>
+          <div className={styles.textBlock} style={{ opacity: visibleBlocks[4] ? 1 : 0.1 }}>
+            PRINT
+          </div>
+          <div className={styles.textBlock} style={{ opacity: visibleBlocks[5] ? 1 : 0.1 }}>
+            Invest in other tokens and
+            track your investment history
+            in your personal account.
+          </div>
         </div>
       </div>
       <div className={styles.btn}>
