@@ -1,0 +1,66 @@
+.cards {
+  background-image: url("./../../assets/svg/bgline.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 127px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 351px;
+  height: 339px;
+
+  border: 1px solid #9EFF52;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0 25px 40px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 32px;
+  font-family: SSEC700;
+  color: #FFFFFF;
+
+  margin-top: auto;
+}
+.textInfo{
+  font-size: 16px;
+  font-family: SF300;
+  color: #FFFFFF;
+
+}
+
+
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 720px) {
+
+}
+
+@media (min-width: 1000px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 1440px) {
+
+}
