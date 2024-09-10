@@ -4,7 +4,7 @@
 
 .rectangle {
   width: 18px;
-  height: 150px;
+  height: 100px;
 
   background-color: #9EFF52;
 
@@ -97,12 +97,32 @@
     margin: 62px 0 63px;
   }
 
+  .btn {
+    position: relative;
+    height: 370px;
+    display: flex;
+    justify-content: start;
+  }
+
   .btn button {
 
     width: 339px;
     height: 80px;
 
     font-size: 24px;
+
+    position: relative;
+
+    transform: rotate(90deg);
+    transform-origin: bottom left;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .rotateButton {
+    transform: rotate(0deg) !important;
+    background-color: transparent !important; /* Убираем фон */
+    border: 1px solid #9EFF52 !important;
+    color: #9EFF52;
   }
 }
 
@@ -121,5 +141,13 @@
 
   .verticalStepsContainer {
     justify-content: center;
+  }
+
+  .btn{
+    justify-content: center;
+  }
+  .btn button{
+    left: -80px;
+    margin-top: 20px;
   }
 }
