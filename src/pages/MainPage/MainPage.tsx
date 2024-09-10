@@ -7,6 +7,7 @@ import { Typewriter } from '../../components/Typewriter';
 import { Upload } from '../../components/Upload';
 import { Gradient } from '../../components/Gradient';
 import { RoadMap } from '../../components/RoadMap';
+import { Cards } from '../../components/Cards';
 
 export const MainPage = () => {
   return(
@@ -18,6 +19,7 @@ export const MainPage = () => {
       <About/>
       <Typewriter/>
       <RoadMap/>
+      <Cards/>
       <Footer/>
     </div>
   )
