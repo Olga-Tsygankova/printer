@@ -2,24 +2,25 @@ import styles from './styles.module.css';
 import { useEffect, useRef, useState } from 'react';
 
 export const VerticalSteps = () => {
-
   const arrowRef = useRef<HTMLDivElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const buttonRef = useRef<HTMLButtonElement | null>(null); // Реф для кнопки
   const [visibleBlocks, setVisibleBlocks] = useState([
     false,
     false,
     false,
     false,
     false,
+    false,
   ]);
+  const [isButtonVisible, setIsButtonVisible] = useState(false); // Состояние видимости кнопки
 
   useEffect(() => {
     const handleScroll = () => {
-      if (arrowRef.current && containerRef.current) {
+      if (arrowRef.current && containerRef.current && buttonRef.current) {
         const arrowRect = arrowRef.current.getBoundingClientRect();
-        const textBlocks = containerRef.current.querySelectorAll(
-          `.${styles.textBlock}`,
-        );
+        const textBlocks = containerRef.current.querySelectorAll(`.${styles.textBlock}`);
+        const buttonRect = buttonRef.current.getBoundingClientRect();
 
         textBlocks.forEach((block, index) => {
           const blockRect = block.getBoundingClientRect();
@@ -41,12 +42,16 @@ export const VerticalSteps = () => {
           }
         });
 
+        // Проверка видимости кнопки
+        if (buttonRect.top + buttonRect.height / 1 < window.innerHeight) {
+          setIsButtonVisible(true);
+        } else {
+          setIsButtonVisible(false);
+        }
       }
     };
 
     window.addEventListener('scroll', handleScroll);
-
-    // Initial check on mount
     handleScroll();
 
     return () => {
@@ -97,7 +102,12 @@ export const VerticalSteps = () => {
         </div>
       </div>
       <div className={styles.btn}>
-        <button>Create a token</button>
+        <button
+          ref={buttonRef}
+          className={`${styles.button} ${isButtonVisible ? styles.rotateButton : ''}`}
+        >
+          Create a token
+        </button>
       </div>
     </div>
   );
