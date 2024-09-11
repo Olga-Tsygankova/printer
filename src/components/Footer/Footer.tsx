@@ -1,9 +1,13 @@
 import styles from './styles.module.css';
 import logo from './../../assets/svg/logo.svg';
 
-export const Footer = () => {
+type IProps = {
+  handleScroll: (event: any) => void;
+}
+export const Footer = ({ handleScroll }: IProps) => {
+
   return (
-    <div className={styles.footer}>
+    <div id="footer" className={styles.footer}>
       <div className={styles.logo}>
         <img src={logo} alt=""/>
       </div>
@@ -16,12 +20,12 @@ export const Footer = () => {
             Web links
           </h4>
           <div className={styles.linksList}>
-            <a href="#">About the project</a>
-            <a href="#">How it works</a>
-            <a href="#">Roadmap</a>
-            <a href="#">Tokenomics</a>
-            <a href="#">Contacts and links</a>
-            <a href="#">Start Printing</a>
+            <a href="#about" onClick={handleScroll}>About the project</a>
+            <a href="#how" onClick={handleScroll}>How it works</a>
+            <a href="#header" onClick={handleScroll}>Roadmap</a>
+            <a href="#header" onClick={handleScroll}>Tokenomics</a>
+            <a href="#header" onClick={handleScroll}>Contacts and links</a>
+            <a href="#header" onClick={handleScroll}>Start Printing</a>
           </div>
         </div>
         <div className={styles.socialLinks}>

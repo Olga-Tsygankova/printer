@@ -10,9 +10,19 @@ import { RoadMap } from '../../components/RoadMap';
 import { Cards } from '../../components/Cards';
 
 export const MainPage = () => {
+
+  const handleScroll = (event: any) => {
+    event.preventDefault();
+    const targetId = event.target.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return(
     <div className={styles.main}>
-      <Header/>
+      <Header handleScroll={handleScroll}/>
       <Banner/>
       <Gradient/>
       <Upload/>
@@ -20,7 +30,7 @@ export const MainPage = () => {
       <Typewriter/>
       <RoadMap/>
       <Cards/>
-      <Footer/>
+      <Footer handleScroll={handleScroll}/>
     </div>
   )
 };
