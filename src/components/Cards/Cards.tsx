@@ -59,33 +59,23 @@ export const Cards = () => {
     <div className={styles.cards}>
       <div className={styles.cardsContainer}>
         <div className={styles.card}>
-          <div className={styles.card1}>
+          <div className={styles.card6}>
             <div className={styles.title}>
-              Token creation made simple
+              Community and support
             </div>
             <div className={styles.textInfo}>
-              A straightforward and intuitive process for issuing tokens through Telegram Mini Apps.
+              Receive help and advice from the Printer community and team at every stage of creating
+              and promoting your token.
             </div>
           </div>
         </div>
         <div className={styles.card}>
-          <div className={styles.card2}>
+          <div className={styles.card5}>
             <div className={styles.title}>
-              Access to liquidity
+              Transparency and control
             </div>
             <div className={styles.textInfo}>
-              The ability to collect liquidity
-              in TON coins to achieve a market capitalization of $60,000.
-            </div>
-          </div>
-        </div>
-        <div className={styles.card}>
-          <div className={styles.card3}>
-            <div className={styles.title}>
-              Blockchain choice
-            </div>
-            <div className={styles.textInfo}>
-              Support for issuing tokens on both TON and Solana, providing flexibility and diversity.
+              Track the current status of your token, collected liquidity, and current value in real time.
             </div>
           </div>
         </div>
@@ -101,23 +91,33 @@ export const Cards = () => {
           </div>
         </div>
         <div className={styles.card}>
-          <div className={styles.card5}>
+          <div className={styles.card3}>
             <div className={styles.title}>
-              Transparency and control
+              Blockchain choice
             </div>
             <div className={styles.textInfo}>
-              Track the current status of your token, collected liquidity, and current value in real time.
+              Support for issuing tokens on both TON and Solana, providing flexibility and diversity.
             </div>
           </div>
         </div>
         <div className={styles.card}>
           <div className={styles.card2}>
             <div className={styles.title}>
-              Community and support
+              Access to liquidity
             </div>
             <div className={styles.textInfo}>
-              Receive help and advice from the Printer community and team at every stage of creating
-              and promoting your token.
+              The ability to collect liquidity
+              in TON coins to achieve a market capitalization of $60,000.
+            </div>
+          </div>
+        </div>
+        <div className={styles.card}>
+          <div className={styles.card1}>
+            <div className={styles.title}>
+              Token creation made simple
+            </div>
+            <div className={styles.textInfo}>
+              A straightforward and intuitive process for issuing tokens through Telegram Mini Apps.
             </div>
           </div>
         </div>
