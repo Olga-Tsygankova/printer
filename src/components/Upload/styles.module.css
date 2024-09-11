@@ -10,31 +10,31 @@
   color: #FFFFFF;
   font-family: SSEC600;
   text-transform: uppercase;
-  animation: slideIn 10s ease-in-out forwards; /* Keep the slide-in animation */
-  display: inline-block; /* Ensure correct clip-path behavior */
-  transition: opacity 1s ease-in-out; /* Smooth transition for text */
+  animation: slideIn 10s ease-in-out forwards;
+  display: inline-block;
+  transition: opacity 1s ease-in-out;
 }
 
 @keyframes slideIn {
   0% {
-    clip-path: inset(0 100% 0 0); /* Hide text from the right */
-    opacity: 1; /* Initial opacity */
+    clip-path: inset(0 100% 0 0);
+    opacity: 1;
   }
   100% {
-    clip-path: inset(0 0 0 0); /* Fully reveal text */
-    opacity: 1; /* Final opacity */
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
   }
 }
 
 .loaded {
-  color: #9EFF52; /* Change text color to green */
-  animation: none; /* Disable animation on loaded text */
+  color: #9EFF52;
+  animation: none;
 }
 
 .allUpload {
   display: flex;
   gap: 10px;
-  transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+  transition: opacity 1s ease-in-out;
 }
 
 .uploadWrapper {
@@ -51,7 +51,7 @@
 .upload {
   height: 100%;
   background-color: #9EFF52;
-  transition: width 0.5s ease-in-out; /* Smooth transition for width */
+  transition: width 0.5s ease-in-out;
 }
 
 .fadeOut {
@@ -72,7 +72,7 @@
 
 
 .fadeOutText {
-  opacity: 0; /* Fade out text */
+  opacity: 0;
 }
 
 .progressText {

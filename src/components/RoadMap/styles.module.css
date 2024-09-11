@@ -21,9 +21,11 @@
   display: inline-block;
 
   color: #9EFF52;
-
+}
+.textHowAnimated {
   animation: tilt 3s forwards;
 }
+
 
 @keyframes tilt {
   0% {
