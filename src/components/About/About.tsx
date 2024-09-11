@@ -4,7 +4,7 @@ import { Windows } from './Windows/Window.tsx';
 
 export const About = () => {
   return (
-    <div className={styles.about}>
+    <div id="about" className={styles.about}>
       <div className={styles.title}>
         <h2>
           <span className={styles.textAbout}>About</span>
