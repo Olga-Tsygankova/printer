@@ -3,7 +3,7 @@ import { VerticalSteps } from './VerticalSteps';
 
 export const RoadMap = () => {
   return (
-    <div className={styles.roadmap}>
+    <div id='how' className={styles.roadmap}>
       <div className={styles.title}>
         <h2>
           <span className={styles.textHow}>How</span>
