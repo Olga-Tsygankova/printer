@@ -16,7 +16,7 @@ export const Upload = () => {
           setTimeout(() => {
             setIsLoaded(true);
             setIsTextFadingIn(true); // Start text fading in
-          }, 1000);
+          }, 900);
           return 100;
         }
         return prevProgress + 1;
