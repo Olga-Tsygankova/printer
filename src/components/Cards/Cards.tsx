@@ -23,18 +23,38 @@ export const Cards = () => {
       }
     });
 
+    const screenWidth = window.innerWidth;
+    const animationType = screenWidth >= 1000 ? 'rotate' : 'slide';
+
     // Анимация для каждой карточки, запускается последовательно
-    cards.forEach((card) => {
-      tl.fromTo(card,
-        { x: 0, opacity: 1 },
-        {
-          x: -100, // Перемещаем вправо
-          opacity: 0, // Плавное исчезновение
-          ease: 'sine.in', // Плавность анимации
-          duration: 1, // Длительность анимации
-        }, '+=0.5'); // Задержка между анимациями
+    cards.forEach((card, index) => {
+      const direction = index % 2 === 0 ? -1 : 1; // Определяем направление смещения
+
+      if (animationType === 'rotate') {
+        tl.fromTo(card,
+          { x: 0, opacity: 1, rotation: 0 },
+          {
+            x: direction * 1000, // Смещаем влево или вправо
+            y: -200,
+            opacity: 0, // Плавное исчезновение
+            rotation: -90, // Поворот на 90 градусов
+            ease: 'sine.in', // Плавность анимации
+            filter: 'blur(5px)',
+            duration: 1, // Длительность анимации
+          }, `+=${index * 0.5}`); // Задержка между анимациями
+      } else {
+        tl.fromTo(card,
+          { x: 0, opacity: 1 },
+          {
+            x: direction * 100, // Смещаем влево или вправо
+            opacity: 0, // Плавное исчезновение
+            ease: 'sine.in', // Плавность анимации
+            duration: 1, // Длительность анимации
+          }, `+=${index * 0.5}`); // Задержка между анимациями
+      }
     });
   }, []);
+
   return (
     <div className={styles.cards}>
       <div className={styles.cardsContainer}>
@@ -103,7 +123,5 @@ export const Cards = () => {
         </div>
       </div>
     </div>
-
   );
-
 };
