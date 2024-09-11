@@ -22,6 +22,8 @@
 .textAbout {
   display: inline-block;
   color: #9EFF52;
+}
+.textAboutAnimated {
   animation: tilt 3s forwards;
 }
 
