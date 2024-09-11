@@ -1,9 +1,12 @@
 .cards {
-  /*background-image: url("./../../assets/svg/bgline.svg");*/
-  /*background-size: contain;*/
-  /*background-repeat: no-repeat;*/
+  background-image: url("./../../assets/svg/bgline.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* Добавлено это свойство */
   margin-top: 127px;
-
+  width: 100%; /* или любая другая ширина */
+  height: 100%;
 }
 
 
