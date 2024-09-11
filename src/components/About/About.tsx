@@ -1,8 +1,9 @@
 import styles from './styles.module.css';
 import greenSpring from './../../assets/svg/greenSpring.svg';
-import { Windows } from './Windows/Window.tsx';
+import { Windows } from './Windows/Windows.tsx';
 
 export const About = () => {
+
   return (
     <div id="about" className={styles.about}>
       <div className={styles.title}>

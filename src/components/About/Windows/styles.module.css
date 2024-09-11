@@ -54,43 +54,55 @@
     padding: 15px 15px 48px;
   }
 
-  .text{
+  .text {
     width: 464px;
 
     font-size: 24px;
     line-height: 36px;
     margin-left: 15px;
   }
-  .icons img{
+
+  .icons img {
     width: 10px;
   }
 }
 
 @media (min-width: 1000px) {
 
+  .window {
+    width: 632px;
+  }
 }
 
 @media (min-width: 1200px) {
-
-}
-
-@media (min-width: 1440px) {
-  .windows{
-    width: 1312px;
+  .windows {
+    width: 1195px;
     gap: 0;
   }
-  .window-1{
+
+  .window {
+    width: 528px;
+  }
+  .window-1 {
     margin-right: auto;
   }
-  .window-2{
+
+  .window-2 {
     margin-left: auto;
     position: relative;
     top: -100px;
 
   }
-  .window-3{
+
+  .window-3 {
     margin-right: auto;
     margin-left: 246px;
   }
+}
 
+@media (min-width: 1440px) {
+  .windows {
+    width: 1312px;
+    gap: 0;
+  }
 }
