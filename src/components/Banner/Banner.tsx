@@ -1,6 +1,6 @@
 import styles from './styles.module.css';
 import spring from './../../assets/svg/spring.svg';
-import Spline from '@splinetool/react-spline';
+// import Spline from '@splinetool/react-spline';
 
 
 export const Banner = () => {
@@ -16,7 +16,7 @@ export const Banner = () => {
       </div>
       <div className={styles.lineContainer}>
         <div className={styles.bigLine}>
-          <Spline scene="https://prod.spline.design/xYyiPwASTmLgZAtn/scene.splinecode"/>
+          {/*<Spline scene="https://prod.spline.design/xYyiPwASTmLgZAtn/scene.splinecode"/>*/}
         </div>
         {/*<div className={styles.smallLine}>*/}
         {/*  <Spline scene="https://prod.spline.design/xYyiPwASTmLgZAtn/scene.splinecode"/>*/}
