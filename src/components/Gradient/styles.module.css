@@ -13,6 +13,8 @@
 
   top: 0;
   left: 0;
+  background-image: url("./../../assets/svg/Rectangle.svg");
+  z-index: -1;
 
   pointer-events: none; /* Чтобы не мешать кликам на другие элементы */
 }
@@ -36,7 +38,7 @@
     rgba(158, 255, 82, 0.18) 100%
   );
 
-  filter: blur(60px); /* Размытие */
+  filter: blur(60px) url(#noise); /* Примените фильтр шума */
   z-index: -1; /* Отправить на задний план */
   animation: scaleLeft 10s linear infinite; /* Анимация масштаба */
 }
@@ -57,7 +59,7 @@
     rgba(158, 255, 82, 0.18) 100%
   );
 
-  filter: blur(60px); /* Размытие */
+  filter: blur(60px) url(#noise); /* Примените фильтр шума */
   z-index: -1; /* Отправить на задний план */
   animation: scaleRight 10s linear infinite; /* Анимация масштаба */
 }
