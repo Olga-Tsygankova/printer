@@ -45,7 +45,23 @@
 /*---------------------------------------------------------------------------------------------*/
 
 @media (min-width: 480px) {
+  .about{
+    margin: 105px 12px 0;
 
+    gap: 23px;
+  }
+  .title{
+    display: flex;
+    gap: 27px;
+
+  }
+  .title h2 {
+    font-size: 64px;
+  }
+  .greenSpring{
+    width: 58px;
+    bottom: 15px;
+  }
 }
 
 @media (min-width: 720px) {
@@ -57,20 +73,31 @@
     font-size: 92px;
   }
   .greenSpring{
-    width: 55px;
+    width: 80px;
   }
 
 }
 
 @media (min-width: 1000px) {
+  .about{
+    margin: 212px 96px 0;
+
+  }
+  .title{
+    gap: 12px;
+
+  }
+  .title h2 {
+    font-size: 120px;
+  }
+
+  .greenSpring{
+    width: 104px;
+  }
 
 }
 
-@media (min-width: 1200px) {
-
-}
-
-@media (min-width: 1440px) {
+@media (min-width: 1280px) {
   .about{
     margin:320px 64px 0;
   }
@@ -84,5 +111,8 @@
     width: 80px;
   }
 
+}
+
+@media (min-width: 1440px) {
 
 }
