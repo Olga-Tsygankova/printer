@@ -12,6 +12,7 @@
 .title {
   width: 351px;
   z-index: 100;
+  position: relative;
 }
 
 .title h1 {
@@ -28,7 +29,11 @@
 
 /* Анимация для слова "Printer" */
 .printer {
-  position: relative;
+  position: absolute;
+
+  bottom: 1px;
+  margin-left: 10px;
+
 
   font-size: 70px;
 
@@ -39,7 +44,7 @@
   width: 32px;
   position: relative;
   top: 5px;
-  right: 5px;
+  right: -190px;
 }
 
 @keyframes font-size-change {
@@ -83,11 +88,51 @@
   flex-direction: column;
   gap: 20px;
 }
+
 /*---------------------------------------------------------------------------------------------*/
 /*                                  MEDIA MIN_WIDTH                                            */
 /*---------------------------------------------------------------------------------------------*/
 
 @media (min-width: 480px) {
+  .banner {
+    gap: 28px;
+
+    margin: 32px 12px 0;
+  }
+
+  .title h1 {
+    font-size: 84px;
+    width: 456px;
+  }
+
+  .printer {
+    font-size: 94px;
+  }
+
+  .spring {
+    width: 43px;
+  }
+
+  .text1, .text2 {
+    font-size: 16px;
+    line-height: 19.09px;
+  }
+
+  .spring {
+    width: 43px;
+    position: relative;
+    top: 5px;
+    right: -250px;
+  }
+
+  @keyframes font-size-change {
+    0% {
+      font-size: 94px;
+    }
+    100% {
+      font-size: 84px;
+    }
+  }
 
 }
 
@@ -97,40 +142,141 @@
 
     margin: 76px 20px 0;
   }
-  .title{
-    width: auto;
-  }
-  .title h1{
+
+  .title h1 {
     font-size: 132px;
+
+    width: 704px;
   }
+
   .printer {
     font-size: 150px;
   }
+
   .spring {
     width: 64px;
+
+    right: -390px;
   }
+
   .text1, .text2 {
     font-size: 24px;
     width: 640px;
     line-height: 28.64px;
   }
+
   @keyframes font-size-change {
     0% {
-      font-size: 150px;
+      font-size: 142px;
     }
     100% {
       font-size: 132px;
     }
   }
-
-
 }
 
 @media (min-width: 1000px) {
+  .banner {
+    gap: 44px;
+
+    margin: 85px 20px 0;
+
+    position: relative;
+  }
+
+  .title h1 {
+    font-size: 140px;
+    width: 964px;
+  }
+
+  .printer {
+    font-size: 150px;
+    /*bottom: -5px;*/
+  }
+
+  .spring {
+    width: 64px;
+    top: 10px;
+  }
+
+  .text1 {
+    order: -1;
+    width: 510px;
+
+  }
+
+  .text2 {
+    margin-left: auto;
+    width: 515px;
+  }
+
+  .lineContainer {
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+  }
+
+  @keyframes font-size-change {
+    0% {
+      font-size: 150px;
+    }
+    100% {
+      font-size: 140px;
+    }
+  }
 
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
+  .banner {
+    gap: 41px;
+
+    margin: 89px 40px 0;
+
+    position: relative;
+  }
+
+  .title h1 {
+    font-size: 170px;
+    width: 1191px;
+  }
+
+  .printer {
+    font-size: 180px;
+    margin-left: 15px;
+  }
+
+  .spring {
+    width: 86px;
+    right: -480px;
+    top: 20px;
+  }
+
+  .text1 {
+    order: -1;
+    width: 510px;
+
+  }
+
+  .text2 {
+    margin-left: auto;
+    width: 640px;
+  }
+
+  .lineContainer {
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+  }
+
+  @keyframes font-size-change {
+    0% {
+      font-size: 180px;
+    }
+    100% {
+      font-size: 170px;
+    }
+  }
 
 }
 
@@ -144,35 +290,43 @@
 
     position: relative;
   }
-  .title{
+
+  .title {
     width: 1120px;
     margin-left: auto;
     margin-right: auto;
   }
-  .title h1{
+
+  .title h1 {
     font-size: 152px;
 
   }
+
   .printer {
     font-size: 170px;
   }
+
   .spring {
     width: 64px;
   }
-  .text1{
+
+  .text1 {
     order: -1;
     width: 640px;
 
   }
-  .text2{
+
+  .text2 {
     margin-left: auto;
     width: 640px;
   }
-  .lineContainer{
+
+  .lineContainer {
     position: absolute;
     bottom: 0;
     left: 100px;
   }
+
   @keyframes font-size-change {
     0% {
       font-size: 170px;
