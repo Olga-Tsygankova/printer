@@ -38,7 +38,7 @@
     rgba(158, 255, 82, 0.18) 100%
   );
 
-  filter: blur(60px) url(#noise); /* Примените фильтр шума */
+  filter: blur(60px);
   z-index: -1; /* Отправить на задний план */
   animation: scaleLeft 10s linear infinite; /* Анимация масштаба */
 }
@@ -59,8 +59,7 @@
     rgba(158, 255, 82, 0.18) 100%
   );
 
-  filter: blur(60px) url(#noise); /* Примените фильтр шума */
-  z-index: -1; /* Отправить на задний план */
+  filter: blur(60px);  z-index: -1; /* Отправить на задний план */
   animation: scaleRight 10s linear infinite; /* Анимация масштаба */
 }
 
