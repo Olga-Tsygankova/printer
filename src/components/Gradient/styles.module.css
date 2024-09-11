@@ -24,7 +24,7 @@
 
   position: relative;
   top: var(--left-gradient-top);
-  left: -250px;
+  left: -50px;
 
   width: 30%;
   height: 50%;
@@ -46,7 +46,7 @@
 .gradientRight {
   position: relative;
   top: var(--right-gradient-top);
-  right: -250px;
+  right: -50px;
 
   width: 30%;
   height: 50%;
@@ -86,4 +86,19 @@
   100% {
     transform: scale(1);
   }
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                  MEDIA MIN_WIDTH                                            */
+/*---------------------------------------------------------------------------------------------*/
+
+@media (min-width: 720px) {
+  .gradientLeft {
+    left: -250px;
+  }
+  .gradientRight{
+    right: -250px;
+  }
+
+
 }
